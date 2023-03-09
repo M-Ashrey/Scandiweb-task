@@ -24,7 +24,6 @@ let switchFunc = function () {
       type="number" id="size" 
       min="1" max="1000000000" 
       autocomplete="off"
-      value="<?php echo $_POST['size] ?? ''; ?>">
       <span id="description">Please, provide size in MB format.</span>`;
 
     const furniture = `
@@ -56,7 +55,7 @@ let switchFunc = function () {
 
     let type = productType.value;
     type = type.toLowerCase();
-    let content = document.getElementById("genContent");
+    let content = document.getElementById("cont");
     
     if (type === "dvd") {
       content.innerHTML = dvd;

@@ -29,7 +29,7 @@
                     <option id="Furniture">Furniture</option>
                 </select>
             </label>
-            <div id="genContent"></div>
+            <div id="cont"></div>
         </form>
         <script src="views/switch.js"></script>
     </main>
