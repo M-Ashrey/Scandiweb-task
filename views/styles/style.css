@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+body header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 15px 0px;
+    width: 90%;
+    border-bottom: 2px solid white;
+}
+body header h1{
+    margin: 0;
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 35vw;
+}
+.buttons button{
+    box-sizing: content-box;
+    padding: 10px;
+    width: 10vw;
+    min-width: 110px;
+    margin: 0;
+}
+body footer{
+    padding: 0;
+}
+body main{
+    padding: 25px 0;
+}
+body main ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+body main ul li{
+    position: relative;
+    border: 2px solid white;
+    min-width: 320px;
+    max-width: 425px;
+    width: 30%;
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body main ul li h2, body main ul li p{
+    margin: 10px;
+}
+body main ul li h2{
+    margin-top: -15px;
+}
+body main ul li input{
+    position: absolute;
+    top: 8%;
+    left: 5%;
+}
+footer{
+    max-height: 10vh;
+    width: 90%;
+    text-align: center;
+    border-top: 2px solid white;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
