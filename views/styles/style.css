@@ -33,9 +33,13 @@ body header h1{
 }
 body footer{
     padding: 0;
+    width: 100%;
+    background-color: #11191f;
 }
 body main{
-    padding: 25px 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    max-height: 75vh;
 }
 body main ul{
     display: flex;
@@ -44,7 +48,7 @@ body main ul{
     gap: 25px;
     padding: 0;
     margin: 0;
-    max-height: 80vh;
+    max-height: 75vh;
     overflow: auto;
 }
 

@@ -41,6 +41,8 @@ body footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    background-color: #11191f;
 }
 
 footer p {
@@ -49,7 +51,7 @@ footer p {
 
 html body main {
     width: 90vw;
-    max-height: 77vh;
+    max-height: 75vh;
     overflow: auto;
     padding: 0;
 }
