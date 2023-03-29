@@ -1,10 +1,20 @@
 <?php
+
 require_once("app/app.php");
 
-$products = $db->getProducts();
+$request_url = $_SERVER['REQUEST_URI'];
 
-//view
-include("views/index.view.php");
+$path = trim(parse_url($request_url, PHP_URL_PATH), '/');
 
+$routes = [
+    '' => 'products.php',
+    'add-product' => 'add-product.php',
+];
 
-$app->massDelete($db);
+if (array_key_exists($path, $routes)) {
+    include($routes[$path]);
+} else {
+    header('HTTP/1.0 404 Not Found');
+    echo 'Page not found';
+}
+?>

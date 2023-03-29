@@ -1,7 +1,5 @@
 <?php
 
-require_once("app/app.php");
-
 class furniture extends product{
     function __construct($sku, $name, $price, $spec){
         $this->sku = $sku;

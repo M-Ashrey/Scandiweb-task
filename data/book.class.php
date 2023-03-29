@@ -1,7 +1,5 @@
 <?php
 
-require_once("app/app.php");
-
 class book extends product{
 
     function __construct($sku, $name, $price, $spec){
@@ -9,7 +7,7 @@ class book extends product{
         $this->name = $name;
         $this->price = $price;
         $this->spec = $spec;
-        $this->type = 'dvd';
+        $this->type = 'book';
     }
     public function getSku(){
         return $this->sku;
