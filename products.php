@@ -1,5 +1,5 @@
 <?php
-
+require_once("app/app.php");
 
 $products = $db->getProducts();
 

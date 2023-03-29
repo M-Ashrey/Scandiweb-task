@@ -1,11 +1,21 @@
 <?php
 
 class furniture extends product{
+    private $length;
+    private $width;
+    private $height;
+    
     function __construct($sku, $name, $price, $spec){
         $this->sku = $sku;
         $this->name = $name;
         $this->price = $price;
-        $this->spec = $spec;
+
+        $dimensions = explode("x", $spec);
+        $this->length = $dimensions[0];
+        $this->width = $dimensions[1];
+        $this->height = $dimensions[2];
+
+        $this->spec = $this->length . 'x' . $this->width . 'x' . $this->height;
         $this->type = 'furniture';
     }
     public function getSku(){

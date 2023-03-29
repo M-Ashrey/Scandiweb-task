@@ -17,6 +17,13 @@ let toggle = function (type) {
     });
 }
 
+let setSpec = function() {
+  let length = document.getElementById("length").value;
+  let width = document.getElementById("width").value;
+  let height = document.getElementById("height").value;
+  document.getElementById("spec").value = `${length} x ${width} x ${height}`;
+}
+
 let switchFunc = function () {
     const dvd = `
       <label for="size">Size (MB) *</label>
@@ -43,7 +50,13 @@ let switchFunc = function () {
       type="number" id="length" 
       min="1" max="100000" 
       autocomplete="off">
-      <span id="description">Please, provide dimensions in HxWxL format.</span>`;
+      <span id="description">Please, provide dimensions in HxWxL format.</span>
+      
+      <input hidden name="spec" required 
+      type="text" id="spec"
+      autocomplete="off">
+      `;
+      
 
     const book = `
       <label for="weight">Weight (kg) *</label>
@@ -57,15 +70,22 @@ let switchFunc = function () {
     type = type.toLowerCase();
     let content = document.getElementById("cont");
     
-    if (type === "dvd") {
-      content.innerHTML = dvd;
-    } else if (type === "furniture") {
+    switch (type) {
+      case "dvd":
+        content.innerHTML = dvd;
+        break;
+      case "furniture":
         content.innerHTML = furniture;
-    } else if (type === "book") {
+        document.getElementById("length").addEventListener('input', setSpec)
+        document.getElementById("width").addEventListener('input', setSpec)
+        document.getElementById("height").addEventListener('input', setSpec)
+        break;
+      case "book":
         content.innerHTML = book;
-    } else {
+        break;
+      default:
         content.innerHTML = "";
-    }
+    }    
 }
 
 typeSwitch.addEventListener('input', switchFunc)

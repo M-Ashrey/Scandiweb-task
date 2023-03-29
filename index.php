@@ -1,13 +1,12 @@
 <?php
 
-require_once("app/app.php");
-
 $request_url = $_SERVER['REQUEST_URI'];
 
 $path = trim(parse_url($request_url, PHP_URL_PATH), '/');
 
 $routes = [
     '' => 'products.php',
+    'index.php' => 'products.php',
     'add-product' => 'add-product.php',
 ];
 

@@ -12,7 +12,7 @@
     <header>
         <h1>Product List Page</h1>
         <div class="buttons">
-            <a href="add-product.php"><button>ADD</button></a>
+            <a href="add-product"><button>ADD</button></a>
             <button id="delete-product-btn" type="submit" form="products">MASS DELETE</button>
         </div>
     </header>
