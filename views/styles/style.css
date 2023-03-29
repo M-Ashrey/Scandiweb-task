@@ -54,7 +54,9 @@ body main ul{
 
 body main ul li{
     position: relative;
-    border: 2px solid white;
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: #eff5fc0a;
     min-width: 320px;
     max-width: 425px;
     width: 30%;
