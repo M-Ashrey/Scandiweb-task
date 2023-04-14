@@ -19,7 +19,6 @@
     <main>
     <form id='products' method='post' action=''>
         <ul>
-        
             <?php 
                 foreach ($products as $product) {
                     $sku = $product->getSku();
