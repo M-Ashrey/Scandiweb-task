@@ -8,7 +8,7 @@ abstract class product {
     protected $type;
 
 
-    abstract protected function insert();
+    abstract protected function insert($db);
     
     abstract protected function getSku();
     abstract protected function setSku($sku);

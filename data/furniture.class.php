@@ -19,7 +19,7 @@ class furniture extends product{
         $this->type = 'furniture';
     }
 
-    public function insert() {
+    public function insert($db) {
         $db->insert($this->getSku(), $this->getName(), $this->getPrice(), $this->getSpec(), 'furniture');
     }
 
