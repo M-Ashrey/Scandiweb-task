@@ -9,6 +9,11 @@ class book extends product{
         $this->spec = $spec;
         $this->type = 'book';
     }
+
+    public function insert() {
+        $db->insert($this->getSku(), $this->getName(), $this->getPrice(), $this->getSpec(), 'book');
+    }
+    
     public function getSku(){
         return $this->sku;
     }

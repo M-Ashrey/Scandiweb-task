@@ -18,6 +18,11 @@ class furniture extends product{
         $this->spec = $this->length . 'x' . $this->width . 'x' . $this->height;
         $this->type = 'furniture';
     }
+
+    public function insert() {
+        $db->insert($this->getSku(), $this->getName(), $this->getPrice(), $this->getSpec(), 'furniture');
+    }
+
     public function getSku(){
         return $this->sku;
     }
@@ -42,8 +47,11 @@ class furniture extends product{
     public function getSpec(){
         return $this->spec . 'CM';
     }
-    public function setSpec($spec){
-        $this->spec = $spec;
+    public function setSpec($length, $width, $height){
+        $this->length = $length;
+        $this->width = $width;
+        $this->height = $height;
+        $this->spec = $length . 'x' . $width . 'x' . $height;
     }
     public function getType(){
         return 'furniture';
