@@ -20,4 +20,6 @@ abstract class product {
     abstract protected function getSpec();
     abstract protected function setSpec($spec);
 
+    abstract protected function getType();
+
 }

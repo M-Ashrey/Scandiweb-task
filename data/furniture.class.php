@@ -45,7 +45,7 @@ class furniture extends product{
     public function setSpec($spec){
         $this->spec = $spec;
     }
-    public function gettype(){
-        return $this->type;
+    public function getType(){
+        return 'furniture';
     }
 }
