@@ -11,7 +11,7 @@ class book extends product{
     }
 
     public function insert($db) {
-        $db->insert($this->getSku(), $this->getName(), $this->getPrice(), $this->getSpec(), 'book');
+        $db->insert($this->getSku(), $this->getName(), $this->price, $this->spec, 'book');
     }
     
     public function getSku(){

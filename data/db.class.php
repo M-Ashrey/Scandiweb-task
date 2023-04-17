@@ -40,6 +40,7 @@ class db {
         ]);
         } catch(PDOException $e) {
             echo "an error occured, please try again";
+            echo $e;
             return;
         }
         

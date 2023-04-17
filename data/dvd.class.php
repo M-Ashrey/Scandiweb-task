@@ -10,7 +10,7 @@ class dvd extends product{
     }
 
     public function insert($db) {
-        $db->insert($this->getSku(), $this->getName(), $this->getPrice(), $this->getSpec(), 'dvd');
+        $db->insert($this->sku, $this->name, $this->price, $this->spec, 'dvd');
     }
 
     public function getSku(){
