@@ -13,8 +13,10 @@ class app
     public function add($db)
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
-            $db->insert($_POST['sku'], $_POST['name'], $_POST['price'], $_POST['spec'], strtolower($_POST['type']));
-
+            //$db->insert(, , );
+            $type = strtolower($_POST['type']);
+            $prod = new $type($_POST['sku'], $_POST['name'], $_POST['price'], $_POST['spec']);
+            $prod->insert();
 
         }
     }
