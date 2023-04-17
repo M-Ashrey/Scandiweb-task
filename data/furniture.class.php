@@ -47,11 +47,13 @@ class furniture extends product{
     public function getSpec(){
         return $this->spec . 'CM';
     }
-    public function setSpec($length, $width, $height){
-        $this->length = $length;
-        $this->width = $width;
-        $this->height = $height;
-        $this->spec = $length . 'x' . $width . 'x' . $height;
+    public function setSpec($spec){
+        $dimensions = explode("x", $spec);
+        $this->length = $dimensions[0];
+        $this->width = $dimensions[1];
+        $this->height = $dimensions[2];
+
+        $this->spec = $this->length . 'x' . $this->width . 'x' . $this->height;
     }
     public function getType(){
         return 'furniture';
